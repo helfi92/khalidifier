@@ -1,14 +1,11 @@
 // Checking page title
 if (document.title.indexOf("Google") != -1) {
     //Creating Elements
-    
-    
-    
-
+ 
     var blackOverlayDiv = document.createElement("div");
-    blackOverlayDiv.style.cssText = "position: fixed;width:100%;height:100%;background-color:rgba(0,0,0,0.1);";
+    //blackOverlayDiv.style.cssText = "position: fixed;width:100%;height:100%;background-color:rgba(0,0,0,0.1);";
     
-    khaledImages = ["assets/images/khaled-1.png"];
+    khaledImages = ["assets/images/khaled-1.png","assets/images/khaled-2.png","assets/images/khaled-3.png","assets/images/khaled-4.png"];
 
 
     var imgDiv = document.createElement("div");
@@ -16,8 +13,7 @@ if (document.title.indexOf("Google") != -1) {
 	imgDiv.style.cssText = "width:100%;height:100%";
     
 
-
-	var imgURL = chrome.extension.getURL(khaledImages[0]);
+	var imgURL = chrome.extension.getURL(khaledImages[2]);
     img.src = imgURL;
     img.style.width = "100%";
     imgDiv.appendChild(img);
@@ -27,7 +23,11 @@ if (document.title.indexOf("Google") != -1) {
     document.body.appendChild(imgDiv);
     
 
+    //replace class .g to white
+    $("<style>.g{background-color:rgba(255,255,255,0.8);}</style>").appendTo("body");
+    
 
+  
     var btn = document.createElement("BUTTON")
     var t = document.createTextNode("CLICK ME");
     btn.appendChild(t);
