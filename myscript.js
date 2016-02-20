@@ -2,8 +2,8 @@
 if (document.title.indexOf("Google") != -1) {
     //Creating Elements
  
-    var blackOverlayDiv = document.createElement("div");
-    //blackOverlayDiv.style.cssText = "position: fixed;width:100%;height:100%;background-color:rgba(0,0,0,0.1);";
+    //var blackOverlayDiv = document.createElement("div");
+    //blackOverlayDiv.style.cssText = "position: absolute;width:100%;height:100%;background-color:rgba(0,0,0,0.3);z-index:-1;";
     
     khaledImages = ["assets/images/khaled-1.png","assets/images/khaled-2.png","assets/images/khaled-3.png","assets/images/khaled-4.png"];
 
@@ -13,7 +13,10 @@ if (document.title.indexOf("Google") != -1) {
 	imgDiv.style.cssText = "width:100%;height:100%";
     
 
-	var imgURL = chrome.extension.getURL(khaledImages[2]);
+	var randomImg = Math.floor(Math.random() * (khaledImages.length - 0));
+	console.log('random: ', randomImg);
+
+	var imgURL = chrome.extension.getURL(khaledImages[randomImg]);
     img.src = imgURL;
     img.style.width = "100%";
     imgDiv.appendChild(img);
@@ -25,6 +28,10 @@ if (document.title.indexOf("Google") != -1) {
 
     //replace class .g to white
     $("<style>.g{background-color:rgba(255,255,255,0.8);}</style>").appendTo("body");
+<<<<<<< f5121d9070b942cae79c78e38c24049e51302a17
+=======
+    
+>>>>>>> google text showing now
 
 }
 
