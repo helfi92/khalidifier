@@ -65,6 +65,8 @@ Array.prototype.choose = function() {
 	return this[Math.floor(Math.random() * this.length)];
 };
 
+jQuery = jQuery || $;
+
 textNodes = jQuery('*').contents().filter(function() {
   return this.nodeType == 3;
 });
@@ -86,5 +88,10 @@ jQuery(textNodes).each(function() {
 
 console.log('extension!');
 
-
-
+player = $("<audio controls autoplay><source src='" + chrome.extension.getURL('assets/music/sample.wav') + "' type='audio/wav'></audio>");
+$('body').append(player);
+player.css({
+	position: 'absolute',
+	top: '0px',
+	left: '0px'
+});

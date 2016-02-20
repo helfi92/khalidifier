@@ -8,7 +8,7 @@
         "scripts": ["jquery.min.js"]
     },
 "web_accessible_resources": [
-    "assets/images/*.png"
+    "assets/*"
   ],    
 "content_scripts": [
     {
