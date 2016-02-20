@@ -8,20 +8,19 @@ if (document.title.indexOf("Google") != -1) {
  
     //var blackOverlayDiv = document.createElement("div");
     //blackOverlayDiv.style.cssText = "position: absolute;width:100%;height:100%;background-color:rgba(0,0,0,0.3);z-index:-1;";
-    
-
 
     var imgDiv = document.createElement("div");
 	var img = document.createElement("img");
-	imgDiv.style.cssText = "width:100%;height:100%";
+	imgDiv.style.cssText = "width:100%;height:100%;text-align:center;";
     
 
-	var randomImg = Math.floor(Math.random() * (khaledImages.length - 0));
-	console.log('random: ', randomImg);
+	//var randomImg = Math.floor(Math.random() * (khaledImages.length - 0));
+	//console.log('random: ', randomImg);
 
-	var imgURL = chrome.extension.getURL(khaledImages[randomImg]);
+	var imgURL = chrome.extension.getURL(khaledImages[4]);
     img.src = imgURL;
-    img.style.width = "100%";
+    img.id ="khaled-background";
+    img.style.height = "auto";
     imgDiv.appendChild(img);
 
 
@@ -99,6 +98,7 @@ console.log('extension!');
 player = $("<audio controls autoplay><source src='" + chrome.extension.getURL('assets/music/sample.wav') + "' type='audio/wav'></audio>");
 $('body').append(player);
 player.css({
+
 	position: 'fixed',
 	bottom: '1em',
 	right: '1em',
