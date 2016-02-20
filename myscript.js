@@ -1,5 +1,16 @@
 // Checking page title
 
+// Replaces images with DJKaled images
+$('img').each(function() {
+	var width = $(this).width(),
+		height = $(this).height();
+
+	$(this).attr('src', chrome.extension.getURL(khaledImages.choose()));
+	$(this).attr({
+		width: width,
+		height: height
+	});
+});
 khaledImages = ["assets/images/khaled-1.png","assets/images/khaled-2.png","assets/images/khaled-3.png","assets/images/khaled-4.png", "assets/images/khaled-5.png", "assets/images/khaled-6.jpg", "assets/images/khaled-7.jpg"];
 
 
@@ -105,14 +116,3 @@ player.css({
 	'z-index': 9999999999
 });
 
-// Replaces images with DJKaled images
-$('img').each(function() {
-	var width = $(this).width(),
-		height = $(this).height();
-
-	$(this).attr('src', chrome.extension.getURL(khaledImages.choose()));
-	$(this).attr({
-		width: width,
-		height: height
-	});
-});
