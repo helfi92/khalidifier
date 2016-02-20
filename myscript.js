@@ -6,20 +6,25 @@ if (document.title.indexOf("Google") != -1) {
     
 
     var blackOverlayDiv = document.createElement("div");
-    blackOverlayDiv.style.cssText = "position: fixed;width:100%;height:100%;background-color:rgba(0,0,0,0.3);";
+    blackOverlayDiv.style.cssText = "position: fixed;width:100%;height:100%;background-color:rgba(0,0,0,0.1);";
     
+    khaledImages = ["assets/images/khaled-1.png"];
 
 
     var imgDiv = document.createElement("div");
 	var img = document.createElement("img");
-	div.style.cssText = "width:100%;height:100%";
-    img.src = "https://tctechcrunch2011.files.wordpress.com/2015/12/khaled-snapchat1.jpg?w=1279&h=727&crop=1";
+	imgDiv.style.cssText = "width:100%;height:100%";
+    
+
+
+	var imgURL = chrome.extension.getURL(khaledImages[0]);
+    img.src = imgURL;
     img.style.width = "100%";
-    div.appendChild(img);
+    imgDiv.appendChild(img);
 
 
-    document.body.appendChild(blackOverlayDiv);
-    document.body.appendChild(div);
+    //document.body.appendChild(blackOverlayDiv);
+    document.body.appendChild(imgDiv);
     
 
 
