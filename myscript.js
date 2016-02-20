@@ -7,7 +7,7 @@ Array.prototype.choose = function() {
 
 
 
-khaledImages = ["assets/images/khaled-1.png","assets/images/khaled-2.png","assets/images/khaled-3.png","assets/images/khaled-4.png", "assets/images/khaled-5.png", "assets/images/khaled-6.jpg", "assets/images/khaled-7.jpg"];
+khaledImages = ["assets/images/khaled-9.jpg","assets/images/khaled-1.png","assets/images/khaled-2.png","assets/images/khaled-3.png","assets/images/khaled-4.png", "assets/images/khaled-5.png", "assets/images/khaled-6.jpg", "assets/images/khaled-7.jpg"];
 
 
 
@@ -37,15 +37,16 @@ if (document.title.indexOf("Google") != -1) {
 	//var randomImg = Math.floor(Math.random() * (khaledImages.length - 0));
 	//console.log('random: ', randomImg);
 
-	var imgURL = chrome.extension.getURL(khaledImages[4]);
+	var imgURL = chrome.extension.getURL(khaledImages[0]);
     img.src = imgURL;
     img.id ="khaled-background";
-    img.style.height = "auto";
-    imgDiv.appendChild(img);
+    
+    document.body.style.cssText = "height:100%;width:100%;background-size:cover;background-repeat:no-repeat;background-attachment:fixed;background-image:url('"+imgURL+"')";
+    //imgDiv.appendChild(img);
 
 
     //document.body.appendChild(blackOverlayDiv);
-    document.body.appendChild(imgDiv);
+    //document.body.appendChild(imgDiv);
     
 
     //replace class .g to white
