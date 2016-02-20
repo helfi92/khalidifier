@@ -25,55 +25,121 @@ quotes = [
 ];
 
 for i in quotes:
-	tokens = nltk.word_tokenize(i);
-		CC = 0;
-		CD = 0;
-		DT = 0;
-		EX = 0;
-		FW = 0;
-		IN = 0;
-		JJ = 0;
-4.	EX
-5.	FW
-6.	IN
-7.	JJ	Adjective
-8.	JJR	Adjective, comparative
-9.	JJS	Adjective, superlative
-10.	LS	List item marker
-11.	MD	Modal
-12.	NN	Noun, singular or mass
-13.	NNS	Noun, plural
-14.	NNP	Proper noun, singular
-15.	NNPS	Proper noun, plural
-16.	PDT	Predeterminer
-17.	POS	Possessive ending
-18.	PRP	Personal pronoun
-19.	PRP$	Possessive pronoun
-20.	RB	Adverb
-21.	RBR	Adverb, comparative
-22.	RBS	Adverb, superlative
-23.	RP	Particle
-24.	SYM	Symbol
-25.	TO	to
-26.	UH	Interjection
-27.	VB	Verb, base form
-28.	VBD	Verb, past tense
-29.	VBG	Verb, gerund or present participle
-30.	VBN	Verb, past participle
-31.	VBP	Verb, non-3rd person singular present
-32.	VBZ	Verb, 3rd person singular present
-33.	WDT	Wh-determiner
-34.	WP	Wh-pronoun
-35.	WP$	Possessive wh-pronoun
-36.	WRB	Wh-adverb
+	words = nltk.word_tokenize(i);
+	tokens = nltk.pos_tag(words);
+	CC = 0;
+	CD = 0;
+	DT = 0;
+	EX = 0;
+	FW = 0;
+	IN = 0;
+	JJ = 0;
+	JJR = 0;
+	JJS = 0;
+	LS = 0;
+	MD = 0;
+	NN = 0;
+	NNS = 0;
+	NNP =0;
+	NNPS = 0;
+	PDT = 0;
+	POS = 0;
+	PRP = 0;
+	PRPX = 0;
+	RB = 0;
+	RBR = 0;
+	RBS = 0;
+	RP = 0;
+	SYM = 0;
+	TO = 0;
+	UH = 0;
+	VB = 0;
+	VBD = 0;
+	VBG = 0;
+	VBN = 0;
+	VBP = 0;
+	VBZ = 0;
+	WDT = 0;
+	WP = 0;
+	WPX = 0;
+	WRB = 0;
 	for j in tokens:
+		print (j);
 		if j[1] == "CC":
-			CC++;
-		else if j[1] == "CD":
-			cd ++;
-		else if j[1] == "DT":
-			DT++;
-		else if j[1] == "EX":
-			EX++;
-		else if j[1] == "DET":
-			det++;
+			CC+=1;
+		elif j[1] == "CD":
+			CD +=1;
+		elif j[1] == "DT":
+			DT+=1;
+		elif j[1] == "EX":
+			EX+=1;
+		elif j[1] == "FW":
+			FW+=1;
+		elif j[1] == "IN":
+			IN +=1;
+		elif j[1] == "JJ":
+			JJ+=1;
+		elif j[1] =="JJR":
+			JJR+=1;
+		elif j[1] == "JJS":
+			JJS +=1;
+		elif j[1] == "LS":
+			LS +=1;
+		elif j[1] == "MD":
+			MD+=1;
+		elif j[1] =="NN":
+			NN+=1;
+		elif j[1] == "NNS":
+			NNS +=1;
+		elif j[1] == "NNP":
+			NNP+=1;
+		elif j[1] =="NNPS":
+			NNPS+=1;
+		elif j[1] == "PDT":
+			PDT +=1;
+		elif j[1] == "POS":
+			POS+=1;
+		elif j[1] =="PRP":
+			PRP+=1;
+		elif j[1] == "PRPX":
+			PRPX +=1;
+		elif j[1] == "RB":
+			RB +=1;
+		elif j[1] =="RBR":
+			RBR+=1;
+		elif j[1] == "RP":
+			RP +=1;
+		elif j[1] == "SYM":
+			SYM+=1;
+		elif j[1] =="TO":
+			TO+=1;
+		elif j[1] == "UH":
+			UH +=1;
+		elif j[1] == "VB":
+			VB+=1;
+		elif j[1] =="VBD":
+			VBD+=1;
+		elif j[1] == "VBG":
+			VBG +=1;
+		elif j[1] == "VBN":
+			VBN +=1;
+		elif j[1] =="VBP":
+			VBP+=1;
+		elif j[1] == "VBG":
+			VBG +=1;
+		elif j[1] == "VBN":
+			VBN+=1;
+		elif j[1] =="VBP":
+			VBP+=1;
+		elif j[1] == "VBZ":
+			VBZ +=1;
+		elif j[1] == "WDT":
+			WDT+=1;
+		elif j[1] =="WP":
+			WP+=1;
+		elif j[1] == "WPX":
+			WPX +=1;
+		elif j[1] == "WRB":
+			WRB +=1;
+	print (	CC, CD, DT, EX, FW, IN, JJ, JJR, JJS, LS, MD,
+			NN, NNS, NNP, NNPS , PDT , POS, PRP, PRPX, RB, RBR, RBS, RP, SYM, TO, UH, VB, VBD, VBG, VBN, VBP, VBZ, WDT, WP, WPX , WRB);
