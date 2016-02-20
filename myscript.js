@@ -7,7 +7,7 @@ Array.prototype.choose = function() {
 
 
 
-khaledImages = ["assets/images/khaled-9.jpg","assets/images/khaled-1.png","assets/images/khaled-2.png","assets/images/khaled-3.png","assets/images/khaled-4.png", "assets/images/khaled-5.png", "assets/images/khaled-6.jpg", "assets/images/khaled-7.jpg"];
+khaledImages = ["assets/images/khaled-9.jpg","assets/images/khaled-2.png","assets/images/khaled-3.png","assets/images/khaled-4.png", "assets/images/khaled-5.png", "assets/images/khaled-6.jpg", "assets/images/khaled-7.jpg"];
 
 
 
@@ -23,33 +23,27 @@ $('img').each(function() {
 	});
 });
 
+
+
 if (document.title.indexOf("Google") != -1) {
-    //Creating Elements
- 
-    //var blackOverlayDiv = document.createElement("div");
-    //blackOverlayDiv.style.cssText = "position: absolute;width:100%;height:100%;background-color:rgba(0,0,0,0.3);z-index:-1;";
+    //google result logo top left
+	var logo = document.querySelector("#logo img");
+	logo.src = chrome.extension.getURL("assets/images/khaled-head.png");
+	logo.style.cssText = "width:100%;height:auto;"
+    
 
     var imgDiv = document.createElement("div");
 	var img = document.createElement("img");
 	imgDiv.style.cssText = "width:100%;height:100%;text-align:center;";
     
 
-	//var randomImg = Math.floor(Math.random() * (khaledImages.length - 0));
-	//console.log('random: ', randomImg);
 
 	var imgURL = chrome.extension.getURL(khaledImages[0]);
     img.src = imgURL;
     img.id ="khaled-background";
     
     document.body.style.cssText = "height:100%;width:100%;background-size:cover;background-repeat:no-repeat;background-attachment:fixed;background-image:url('"+imgURL+"')";
-    //imgDiv.appendChild(img);
 
-
-    //document.body.appendChild(blackOverlayDiv);
-    //document.body.appendChild(imgDiv);
-    
-
-    //replace class .g to white
     $("<style>.g{background-color:rgba(255,255,255,0.8);}</style>").appendTo("body");
 
 }
