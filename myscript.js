@@ -92,8 +92,8 @@ console.log('extension!');
 player = $("<audio controls autoplay><source src='" + chrome.extension.getURL('assets/music/sample.wav') + "' type='audio/wav'></audio>");
 $('body').append(player);
 player.css({
-	position: 'absolute',
-	bottom: '1 em',
-	right: '1 em',
+	position: 'fixed',
+	bottom: '1em',
+	right: '1em',
 	'z-index': 9999999999
 });
