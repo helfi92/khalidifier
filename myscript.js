@@ -28,10 +28,6 @@ if (document.title.indexOf("Google") != -1) {
 
     //replace class .g to white
     $("<style>.g{background-color:rgba(255,255,255,0.8);}</style>").appendTo("body");
-<<<<<<< f5121d9070b942cae79c78e38c24049e51302a17
-=======
-    
->>>>>>> google text showing now
 
 }
 
