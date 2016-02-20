@@ -1,5 +1,9 @@
 // Checking page title
 
+khaledImages = ["assets/images/khaled-1.png","assets/images/khaled-2.png","assets/images/khaled-3.png","assets/images/khaled-4.png", "assets/images/khaled-5.png", "assets/images/khaled-6.jpg", "assets/images/khaled-7.jpg"];
+
+
+
 // Replaces images with DJKaled images
 $('img').each(function() {
 	var width = $(this).width(),
@@ -11,8 +15,6 @@ $('img').each(function() {
 		height: height
 	});
 });
-khaledImages = ["assets/images/khaled-1.png","assets/images/khaled-2.png","assets/images/khaled-3.png","assets/images/khaled-4.png", "assets/images/khaled-5.png", "assets/images/khaled-6.jpg", "assets/images/khaled-7.jpg"];
-
 
 if (document.title.indexOf("Google") != -1) {
     //Creating Elements
