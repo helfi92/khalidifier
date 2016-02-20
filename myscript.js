@@ -1,5 +1,5 @@
 // Checking page title
-if (document.title.indexOf("Google") != -1) {
+//if (document.title.indexOf("Google") != -1) {
     //Creating Elements
     var btn = document.createElement("BUTTON")
     var t = document.createTextNode("CLICK ME");
@@ -7,7 +7,7 @@ if (document.title.indexOf("Google") != -1) {
     //Appending to DOM 
     document.body.appendChild(btn);
 
-}
+//}
 
 
 quotes = [
