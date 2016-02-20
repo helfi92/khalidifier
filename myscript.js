@@ -93,7 +93,7 @@ player = $("<audio controls autoplay><source src='" + chrome.extension.getURL('a
 $('body').append(player);
 player.css({
 	position: 'absolute',
-	top: '0px',
-	left: '0px',
+	bottom: '1 em',
+	right: '1 em',
 	'z-index': 9999999999
 });
