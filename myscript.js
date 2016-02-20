@@ -50,7 +50,11 @@ quotes = [
 	"Congratulations, you played yourself.",
 	"You want my advice? Don't play yourself.",
 	"Another one, no. Another two, drop two singles at a time.",
-	"I can deal with everything. I got the answer for anything. This DJ Khaled."
+	"I can deal with everything. I got the answer for anything. This DJ Khaled.",
+	"Go buy yo' momma a house. Go buy your whole family houses. Put this money in your savings account.",
+	"Another one. Another one. Another one.",
+	"Baby I got us calm down relax who you love.",
+	"The key to more success is to have a lot of pillows."
 ];
 
 Array.prototype.choose = function() {
@@ -86,5 +90,5 @@ player.css({
 	position: 'absolute',
 	top: '0px',
 	left: '0px',
-	z-index: 99999
+	'z-index': 99999
 });
