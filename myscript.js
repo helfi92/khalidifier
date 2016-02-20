@@ -57,7 +57,9 @@ quotes = [
 	"Go buy yo' momma a house. Go buy your whole family houses. Put this money in your savings account.",
 	"Another one. Another one. Another one.",
 	"Baby I got us calm down relax who you love.",
-	"The key to more success is to have a lot of pillows."
+	"The key to more success is to have a lot of pillows.",
+	"You see that bamboo behind me though. You see that bamboo. Ain't nothin' like bamboo.",
+	"Life is smooth. It's on you if you want to be smooth. Some people want to live life rough and crazy."
 ];
 
 Array.prototype.choose = function() {
@@ -90,9 +92,9 @@ console.log('extension!');
 player = $("<audio controls autoplay><source src='" + chrome.extension.getURL('assets/music/sample.wav') + "' type='audio/wav'></audio>");
 $('body').append(player);
 player.css({
-	position: 'absolute',
-	top: '1em',
-	left: '1em',
-	'z-index': 99999,
 
+	position: 'fixed',
+	bottom: '1em',
+	right: '1em',
+	'z-index': 9999999999
 });
