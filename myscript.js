@@ -20,5 +20,5 @@ Array.prototype.choose = function() {
 
 // Replaces all quotes
 $('*:not(:has(*))').text(function() {
-	return $(this).text().replace(/"+"/g, '"' + quotes.choose() + '"');
+	return $(this).text().replace(/"[^"]+"/g, '"' + quotes.choose() + '"');
 }); 
