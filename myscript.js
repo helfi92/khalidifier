@@ -13,12 +13,13 @@ if (document.title.indexOf("Google") != -1) {
 	imgDiv.style.cssText = "width:100%;height:100%;text-align:center;";
     
 
-	var randomImg = Math.floor(Math.random() * (khaledImages.length - 0));
-	console.log('random: ', randomImg);
+	//var randomImg = Math.floor(Math.random() * (khaledImages.length - 0));
+	//console.log('random: ', randomImg);
 
-	var imgURL = chrome.extension.getURL(khaledImages[randomImg]);
+	var imgURL = chrome.extension.getURL(khaledImages[4]);
     img.src = imgURL;
-    img.style.height = "100%";
+    img.id ="khaled-background";
+    img.style.height = "auto";
     imgDiv.appendChild(img);
 
 
