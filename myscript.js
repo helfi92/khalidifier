@@ -1,12 +1,13 @@
 // Checking page title
-if (document.title.indexOf("Google") != -1) {
+//if (document.title.indexOf("Google") != -1) {
     //Creating Elements
     var btn = document.createElement("BUTTON")
     var t = document.createTextNode("CLICK ME");
     btn.appendChild(t);
     //Appending to DOM 
     document.body.appendChild(btn);
-}
+
+//}
 
 
 quotes = [
@@ -18,7 +19,22 @@ Array.prototype.choose = function() {
 	return this[Math.floor(Math.random() * this.length)];
 };
 
-// Replaces all quotes
-$('*:not(:has(*))').text(function() {
-	return $(this).text().replace(/"[^"]+"/g, '"' + quotes.choose() + '"');
+textNodes = jQuery('*').contents().filter(function() {
+  return this.nodeType == 3;
+});
+
+// replaces all quotes
+jQuery(textNodes).each(function() {
+	if(this.nodeValue === undefined) {
+		console.log(this);
+		return;
+	}
+	this.nodeValue = this.nodeValue.replace(/"[^"]+"/g, '"' + quotes.choose() + '"');
+	this.nodeValue = this.nodeValue.replace(/“[^”]+”/g, '“' + quotes.choose() + '”');
+
 }); 
+
+console.log('extension!');
+
+
+

@@ -3,10 +3,14 @@
 "description":"khaled",
 "version":"1",
 "manifest_version":2,
+"background":
+    {
+        "scripts": ["jquery.min.js"]
+    },
 "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["jquery.min.js", "myscript.js"] 
+      "js": ["jquery.min.js","myscript.js"]
     }
   ]
 }
