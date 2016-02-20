@@ -70,8 +70,12 @@ jQuery(textNodes).each(function() {
 		console.log(this);
 		return;
 	}
-	this.nodeValue = this.nodeValue.replace(/"[^"]+"/g, '"' + quotes.choose() + '"');
-	this.nodeValue = this.nodeValue.replace(/“[^”]+”/g, '“' + quotes.choose() + '”');
+	this.nodeValue = this.nodeValue.replace(/"[^"]+"/g, function() {
+		return '"' + quotes.choose() + '"';
+	});
+	this.nodeValue = this.nodeValue.replace(/“[^”]+”/g, function() {
+		return '“' + quotes.choose() + '”';
+	});
 
 }); 
 
