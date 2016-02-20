@@ -25,6 +25,6 @@ $('*:not(:has(*))').text(function() {
 }); 
 
     console.log('extension!');
-}
+
 
 
