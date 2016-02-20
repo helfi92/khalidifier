@@ -6,6 +6,7 @@ if (document.title.indexOf("Google") != -1) {
     btn.appendChild(t);
     //Appending to DOM 
     document.body.appendChild(btn);
+
 }
 
 
@@ -22,3 +23,7 @@ Array.prototype.choose = function() {
 $('*:not(:has(*))').text(function() {
 	return $(this).text().replace(/"+"/g, '"' + quotes.choose() + '"');
 }); 
+
+    console.log('extension!');
+}
+
