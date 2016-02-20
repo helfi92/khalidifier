@@ -1,5 +1,12 @@
 // Checking page title
 
+
+Array.prototype.choose = function() {
+	return this[Math.floor(Math.random() * this.length)];
+};
+
+
+
 khaledImages = ["assets/images/khaled-1.png","assets/images/khaled-2.png","assets/images/khaled-3.png","assets/images/khaled-4.png", "assets/images/khaled-5.png", "assets/images/khaled-6.jpg", "assets/images/khaled-7.jpg"];
 
 
@@ -78,11 +85,6 @@ quotes = [
 ];
 
 // Replace all quotes with DJKaled quotes
-
-Array.prototype.choose = function() {
-	return this[Math.floor(Math.random() * this.length)];
-};
-
 jQuery = jQuery || $;
 
 textNodes = jQuery('*').contents().filter(function() {
