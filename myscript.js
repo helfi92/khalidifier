@@ -1,11 +1,14 @@
 // Checking page title
+
+khaledImages = ["assets/images/khaled-1.png","assets/images/khaled-2.png","assets/images/khaled-3.png","assets/images/khaled-4.png", "assets/images/khaled-5.png", "assets/images/khaled-6.jpg", "assets/images/khaled-7.jpg"];
+
+
 if (document.title.indexOf("Google") != -1) {
     //Creating Elements
  
     //var blackOverlayDiv = document.createElement("div");
     //blackOverlayDiv.style.cssText = "position: absolute;width:100%;height:100%;background-color:rgba(0,0,0,0.3);z-index:-1;";
     
-    khaledImages = ["assets/images/khaled-1.png","assets/images/khaled-2.png","assets/images/khaled-3.png","assets/images/khaled-4.png"];
 
 
     var imgDiv = document.createElement("div");
@@ -62,6 +65,8 @@ quotes = [
 	"Life is smooth. It's on you if you want to be smooth. Some people want to live life rough and crazy."
 ];
 
+// Replace all quotes with DJKaled quotes
+
 Array.prototype.choose = function() {
 	return this[Math.floor(Math.random() * this.length)];
 };
@@ -89,6 +94,8 @@ jQuery(textNodes).each(function() {
 
 console.log('extension!');
 
+// Player DJKaled song
+
 player = $("<audio controls autoplay><source src='" + chrome.extension.getURL('assets/music/sample.wav') + "' type='audio/wav'></audio>");
 $('body').append(player);
 player.css({
@@ -96,4 +103,16 @@ player.css({
 	bottom: '1em',
 	right: '1em',
 	'z-index': 9999999999
+});
+
+// Replaces images with DJKaled images
+$('img').each(function() {
+	var width = $(this).width(),
+		height = $(this).height();
+
+	$(this).attr('src', chrome.extension.getURL(khaledImages.choose()));
+	$(this).attr({
+		width: width,
+		height: height
+	});
 });
