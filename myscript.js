@@ -25,14 +25,6 @@ if (document.title.indexOf("Google") != -1) {
 
     //replace class .g to white
     $("<style>.g{background-color:rgba(255,255,255,0.8);}</style>").appendTo("body");
-    
-
-  
-    var btn = document.createElement("BUTTON")
-    var t = document.createTextNode("CLICK ME");
-    btn.appendChild(t);
-    //Appending to DOM 
-    document.body.appendChild(btn);
 
 }
 
