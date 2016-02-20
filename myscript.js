@@ -95,5 +95,5 @@ player.css({
 	position: 'absolute',
 	top: '0px',
 	left: '0px',
-	'z-index': 99999
+	'z-index': 9999999999
 });
