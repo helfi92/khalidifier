@@ -5,12 +5,12 @@ if (document.title.indexOf("Google") != -1) {
     //var blackOverlayDiv = document.createElement("div");
     //blackOverlayDiv.style.cssText = "position: absolute;width:100%;height:100%;background-color:rgba(0,0,0,0.3);z-index:-1;";
     
-    khaledImages = ["assets/images/khaled-1.png","assets/images/khaled-2.png","assets/images/khaled-3.png","assets/images/khaled-4.png"];
+    khaledImages = ["assets/images/khaled-1.png","assets/images/khaled-2.png","assets/images/khaled-3.png","assets/images/khaled-4.png","assets/images/khaled-5.png","assets/images/khaled-6.png","assets/images/khaled-7.png","assets/images/khaled-8.png"];
 
 
     var imgDiv = document.createElement("div");
 	var img = document.createElement("img");
-	imgDiv.style.cssText = "width:100%;height:100%";
+	imgDiv.style.cssText = "width:100%;height:100%;text-align:center;";
     
 
 	var randomImg = Math.floor(Math.random() * (khaledImages.length - 0));
@@ -18,7 +18,7 @@ if (document.title.indexOf("Google") != -1) {
 
 	var imgURL = chrome.extension.getURL(khaledImages[randomImg]);
     img.src = imgURL;
-    img.style.width = "100%";
+    img.style.height = "100%";
     imgDiv.appendChild(img);
 
 
@@ -91,7 +91,8 @@ player = $("<audio controls autoplay><source src='" + chrome.extension.getURL('a
 $('body').append(player);
 player.css({
 	position: 'absolute',
-	top: '0px',
-	left: '0px',
-	'z-index': 99999
+	top: '1em',
+	left: '1em',
+	'z-index': 99999,
+
 });
