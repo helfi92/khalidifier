@@ -32,15 +32,11 @@ if (document.title.indexOf("Google") != -1) {
 	logo.style.cssText = "width:100%;height:auto;"
     
 
-    var imgDiv = document.createElement("div");
-	var img = document.createElement("img");
-	imgDiv.style.cssText = "width:100%;height:100%;text-align:center;";
-    
+ 
 
 
 	var imgURL = chrome.extension.getURL(khaledImages[0]);
-    img.src = imgURL;
-    img.id ="khaled-background";
+    
     
     document.body.style.cssText = "height:100%;width:100%;background-size:cover;background-repeat:no-repeat;background-attachment:fixed;background-image:url('"+imgURL+"')";
 
