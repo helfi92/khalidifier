@@ -57,7 +57,9 @@ quotes = [
 	"Go buy yo' momma a house. Go buy your whole family houses. Put this money in your savings account.",
 	"Another one. Another one. Another one.",
 	"Baby I got us calm down relax who you love.",
-	"The key to more success is to have a lot of pillows."
+	"The key to more success is to have a lot of pillows.",
+	"You see that bamboo behind me though. You see that bamboo. Ain't nothin' like bamboo.",
+	"Life is smooth. It's on you if you want to be smooth. Some people want to live life rough and crazy."
 ];
 
 Array.prototype.choose = function() {
