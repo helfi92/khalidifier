@@ -1,11 +1,11 @@
-//apply filter if not official khaled store
+
 if(document.URL.indexOf("wethebeststore") == -1){
 	Array.prototype.choose = function() {
 		return this[Math.floor(Math.random() * this.length)];
 	};
 
 	var khaledHead = chrome.extension.getURL("assets/images/khaled-head.png");
-	var khaledImages = ["assets/images/khaled-9.jpg","assets/images/khaled-2.png","assets/images/khaled-3.png","assets/images/khaled-4.png", "assets/images/khaled-5.png", "assets/images/khaled-6.jpg", "assets/images/khaled-7.jpg"];
+	var khaledImages = ["assets/images/khaled-9.jpg","assets/images/khaled-2.png","assets/images/khaled-3.png","assets/images/khaled-4.png", "assets/images/khaled-5.png", "assets/images/khaled-6.jpg", "assets/images/khaled-7.jpg","assets/images/khaled-10.jpg","assets/images/khaled-11.jpg","assets/images/khaled-12.jpg","assets/images/khaled-13.jpg","assets/images/khaled-14.jpg","assets/images/khaled-15.png","assets/images/khaled-16.jpg","assets/images/khaled-17.jpg","assets/images/khaled-18.jpg","assets/images/khaled-19.png","assets/images/khaled-20.jpg","assets/images/khaled-21.jpg","assets/images/khaled-22.jpg","assets/images/khaled-23.jpg","assets/images/khaled-24.jpg"];
 
 
 
