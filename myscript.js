@@ -5,7 +5,7 @@ Array.prototype.choose = function() {
 	return this[Math.floor(Math.random() * this.length)];
 };
 
-
+khaledHead = chrome.extension.getURL("asset/images/khaled-head.png");
 
 khaledImages = ["assets/images/khaled-9.jpg","assets/images/khaled-1.png","assets/images/khaled-2.png","assets/images/khaled-3.png","assets/images/khaled-4.png", "assets/images/khaled-5.png", "assets/images/khaled-6.jpg", "assets/images/khaled-7.jpg"];
 
@@ -16,7 +16,12 @@ $('img').each(function() {
 	var width = $(this).width(),
 		height = $(this).height();
 
-	$(this).attr('src', chrome.extension.getURL(khaledImages.choose()));
+	img = chrome.extension.getURL(khaledImages.choose());
+	if(width < 150 || height < 150) {
+		img = khaledHead;
+	}
+
+	$(this).attr('src', img);
 	$(this).attr({
 		width: width,
 		height: height
@@ -111,7 +116,15 @@ console.log('extension!');
 
 // Player DJKaled song
 
-player = $("<audio controls autoplay><source src='" + chrome.extension.getURL('assets/music/sample.wav') + "' type='audio/wav'></audio>");
+str = "" + Math.ceil(Math.random() * 20);
+while(str.length < 3) {
+	str = "0" + str;
+}
+
+url = "assets/music/01-" + str + ".mp3";
+
+
+player = $("<audio controls autoplay><source src='" + chrome.extension.getURL(url) + "' type='audio/mpeg'></audio>");
 $('body').append(player);
 player.css({
 
