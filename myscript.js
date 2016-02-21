@@ -1,5 +1,34 @@
 var exceptionList = ["wethebeststore","mail.google"];
 var khaledImages = ["assets/images/khaled-9.jpg","assets/images/khaled-2.png","assets/images/khaled-3.png","assets/images/khaled-4.png", "assets/images/khaled-5.png", "assets/images/khaled-6.jpg", "assets/images/khaled-7.jpg","assets/images/khaled-10.jpg","assets/images/khaled-11.jpg","assets/images/khaled-12.jpg","assets/images/khaled-13.jpg","assets/images/khaled-14.jpg","assets/images/khaled-15.png","assets/images/khaled-16.jpg","assets/images/khaled-17.jpg","assets/images/khaled-18.jpg","assets/images/khaled-19.png","assets/images/khaled-20.jpg","assets/images/khaled-21.jpg","assets/images/khaled-22.jpg","assets/images/khaled-23.jpg","assets/images/khaled-24.jpg"];
+var quotes = [
+		"Smh they get mad when u have joy.",
+		"Baby, you smart. I want you to film me taking a shower.",
+		"The key is to make it.",
+		"Key to more success is clean heart and clean face.",
+		"You smart! You loyal! You're a genius!",
+		"Give thanks to the most high.",
+		"They will try to close the door on u, just open it.",
+		"They don't want you to win. They don't want you to have the No. 1 record in the country. They don't want you to get healthy. And they don't want you to have that view.",
+		"I don't have no favorite rock bands. I'm a fan of rock music though.",
+		"I wanted to see what type of trees is growing in Marcy Projects, what type of water Jay Z was drinking.",
+		"Those that weather the storm r the great ones.",
+		"The key to more success is coco butter.",
+		"I changed... a lot.",
+		"My fans expect me to be greater and keep being great.",
+		"There will be road blocks but we will overcome it.",
+		"They don't want you to jet ski.",
+		"Them doors that was always closed, I ripped the doors off, took the hinges off. And when I took the hinges off, I put the hinges on the f*ckboys' hands.",
+		"Congratulations, you played yourself.",
+		"You want my advice? Don't play yourself.",
+		"Another one, no. Another two, drop two singles at a time.",
+		"I can deal with everything. I got the answer for anything. This DJ Khaled.",
+		"Go buy yo' momma a house. Go buy your whole family houses. Put this money in your savings account.",
+		"Another one. Another one. Another one.",
+		"Baby I got us calm down relax who you love.",
+		"The key to more success is to have a lot of pillows.",
+		"You see that bamboo behind me though. You see that bamboo. Ain't nothin' like bamboo.",
+		"Life is smooth. It's on you if you want to be smooth. Some people want to live life rough and crazy."
+	];
 var flag = false;
 
 for(var i = 0; i < exceptionList.length ; i++){
@@ -59,35 +88,6 @@ if(flag == false){
 	}
 
 
-	quotes = [
-		"Smh they get mad when u have joy.",
-		"Baby, you smart. I want you to film me taking a shower.",
-		"The key is to make it.",
-		"Key to more success is clean heart and clean face.",
-		"You smart! You loyal! You're a genius!",
-		"Give thanks to the most high.",
-		"They will try to close the door on u, just open it.",
-		"They don't want you to win. They don't want you to have the No. 1 record in the country. They don't want you to get healthy. And they don't want you to have that view.",
-		"I don't have no favorite rock bands. I'm a fan of rock music though.",
-		"I wanted to see what type of trees is growing in Marcy Projects, what type of water Jay Z was drinking.",
-		"Those that weather the storm r the great ones.",
-		"The key to more success is coco butter.",
-		"I changed... a lot.",
-		"My fans expect me to be greater and keep being great.",
-		"There will be road blocks but we will overcome it.",
-		"They don't want you to jet ski.",
-		"Them doors that was always closed, I ripped the doors off, took the hinges off. And when I took the hinges off, I put the hinges on the f*ckboys' hands.",
-		"Congratulations, you played yourself.",
-		"You want my advice? Don't play yourself.",
-		"Another one, no. Another two, drop two singles at a time.",
-		"I can deal with everything. I got the answer for anything. This DJ Khaled.",
-		"Go buy yo' momma a house. Go buy your whole family houses. Put this money in your savings account.",
-		"Another one. Another one. Another one.",
-		"Baby I got us calm down relax who you love.",
-		"The key to more success is to have a lot of pillows.",
-		"You see that bamboo behind me though. You see that bamboo. Ain't nothin' like bamboo.",
-		"Life is smooth. It's on you if you want to be smooth. Some people want to live life rough and crazy."
-	];
 
 	// Replace all quotes with DJKaled quotes
 	jQuery = jQuery || $;
