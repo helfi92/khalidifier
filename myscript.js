@@ -15,7 +15,7 @@ if(document.URL.indexOf("wethebeststore") == -1){
 			height = $(this).height();
 
 		img = chrome.extension.getURL(khaledImages.choose());
-		if(width < 100 || height < 100) {
+		if(width < 100 && height < 100) {
 			img = khaledHead;
 		}
 
@@ -48,9 +48,7 @@ if(document.URL.indexOf("wethebeststore") == -1){
 		});
 
 		
-		document.URL.addEventListener("click", function(){
-	    	console.log('hello');
-		});
+		
 	}
 
 
