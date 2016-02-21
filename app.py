@@ -3,8 +3,8 @@ from flask import Flask, jsonify, request
 import urllib
 import json
 import nltk;
-url = 'https://ussouthcentral.services.azureml.net/workspaces/0fbc667abffc433ca9f0c7ffb2127fa6/services/f4f3fd4a45be412c9d4e6177078701e8/execute?api-version=2.0'
-api_key = 'MIjisO57tPoSr8zmQY11FUs9/+7ggSxX3tYvNvk0kgO88NuIwBCf/Hb4ZRHt4p+Xz/eixaLIDMgpxuUrlAl+7A==' # Replace this with the API key for the web service
+url = 'https://ussouthcentral.services.azureml.net/workspaces/b4219a08c35245e78b882c9105307c41/services/1e2b2db6e0d54879bd728cfba17a04cf/execute?api-version=2.0'
+api_key = 'K/j3Ss6xwmis/w4m4go/EgtCngl9621MUCW+Cm9kBvu92T9dLdBtYQ9NmZw+75pQYOhwqQP9nehlGeUuiwl+mw==' # Replace this with the API key for the web service
 headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
 
 quotes = [
