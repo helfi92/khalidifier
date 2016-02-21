@@ -193,7 +193,7 @@ def get_task(i):
 			if float(j) > maxNum:
 				maxNum = float(j)
 				theIndex = index;
-			index +1;
+			index +=1;
 
 
 		if index == 0:
