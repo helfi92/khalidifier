@@ -5,9 +5,9 @@ Array.prototype.choose = function() {
 	return this[Math.floor(Math.random() * this.length)];
 };
 
-khaledHead = chrome.extension.getURL("asset/images/khaled-head.png");
+var khaledHead = chrome.extension.getURL("asset/images/khaled-head.png");
 
-khaledImages = ["assets/images/khaled-9.jpg","assets/images/khaled-2.png","assets/images/khaled-3.png","assets/images/khaled-4.png", "assets/images/khaled-5.png", "assets/images/khaled-6.jpg", "assets/images/khaled-7.jpg"];
+var khaledImages = ["assets/images/khaled-9.jpg","assets/images/khaled-2.png","assets/images/khaled-3.png","assets/images/khaled-4.png", "assets/images/khaled-5.png", "assets/images/khaled-6.jpg", "assets/images/khaled-7.jpg"];
 
 
 
@@ -29,7 +29,6 @@ $('img').each(function() {
 });
 
 
-
 if (document.title.indexOf("Google") != -1) {
     //google result logo top left
 	var logo = document.querySelector("#logo img");
@@ -37,16 +36,18 @@ if (document.title.indexOf("Google") != -1) {
 	logo.style.cssText = "width:100%;height:auto;"
     
 
- 
-
-
 	var imgURL = chrome.extension.getURL(khaledImages[0]);
-    
-    
+        
     document.body.style.cssText = "height:100%;width:100%;background-size:cover;background-repeat:no-repeat;background-attachment:fixed;background-image:url('"+imgURL+"')";
 
     $("<style>.g{background-color:rgba(255,255,255,0.8);}</style>").appendTo("body");
 
+	$(document).on('DOMNodeInserted', function(e) {
+	    if($(e.target).is(".sbsb_a")){
+	    	console.log('yes!');
+	    	$(".sbsb_b").append('<li role="presentation" class="sbsb_c gsfs" dir="ltr" style="text-align: left;"><div role="option" id="sbse2"><div class="sbqs_a" aria-hidden="true"><a href="#ifl" class="sbsb_i sbqs_b">I\'m Feeling Lucky »</a></div><div class="sbqs_c"><b>Congratulations, you played yourself</b></div></div></li>');
+	    }
+	});
 }
 
 
